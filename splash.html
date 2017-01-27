@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     @import url('https://fonts.googleapis.com/css?family=Overpass:300,300i,600,600i');
     @import url('https://fonts.googleapis.com/css?family=Sintony:700');
@@ -12,17 +13,28 @@
       background-size: cover;
       background-repeat: no-repeat;
       height: 100vh;
+      overflow: auto;
     }
     .all-wrapper{
       width: 864px;
       height: 475px;
-      margin: auto;
+      margin-left: calc(50vw - 432px);
       margin-top: calc(50vh - 237px);
       white-space: nowrap;
       background: #231F20;
       box-shadow: 2px 2px 20px rgba(0, 0, 0, .7);
-      padding: 20px;
+      padding: 50px 20px;
       box-sizing: border-box;
+      display: inline-block;
+    }
+    @media (max-width:800px){
+      .all-wrapper{
+        width: 100vw;
+        white-space: normal;
+        height: auto;
+        margin-top: 30px;
+        margin-left: 0;
+      }
     }
     .contact-container{
       width: 300px;
@@ -30,6 +42,14 @@
       overflow: hidden;
       background: #231F20;
       display: inline-block;
+      border-right: 1px solid white;
+    }
+    @media (max-width:800px){
+      .contact-container{
+        width: 100%;
+        border-right: none;
+        text-align: center;
+      }
     }
     .logo{
       height: 155px;
@@ -38,7 +58,12 @@
       background-size: auto 70%;
       background-position: center;
       background-repeat: no-repeat;
-      margin-top: 30px
+      margin-top: 10px
+    }
+    @media (max-width:800px){
+      .logo{
+        width: 100%;
+      }
     }
     .contact-wrapper{
       padding: 20px;
@@ -56,6 +81,7 @@
       font-family: 'Overpass';
       color: white;
       font-weight: 300;
+      font-size: 100%
     }
     hr{
       color: white;
@@ -74,36 +100,43 @@
       height: 475px;
       display: inline-block;
       box-sizing: border-box;
-      padding: 90px 50px 0 20px;
+      padding: 55px 50px 0 20px;
       vertical-align: top;
       white-space: normal;
-      background: ghostwhite;
       margin-top: -20px;
     }
+    @media (max-width:800px){
+      .info-wrapper{
+        width: 100%;
+        padding-right: 20px;
+      }
+    }
     .info-wrapper p{
-      color: #231F20;
+      line-height: 180%;
     }
   </style>
 </head>
 <body>
-  <!-- <div class="nav"></div> -->
-  <div class="all-wrapper">
-  <div class="contact-container">
-    <div class="logo"></div>
-      <div class="contact-wrapper">
-        <h3>Taxus Street Coffee</h3>
-        <p>Based out of Chesapeake, VA</p>
-        <p>Phone: <a href="tel:555-555-5555">555.555.555</a></p>
-        <p>Email: <a href="mailto:someone@example.com?Subject=Hello%20again" target="_top">info@taxusstreetcoffee.com</a></p>
+    <div class="all-wrapper">
 
-      </div>
+        <div class="contact-container">
+
+          <div class="logo"></div>
+
+          <div class="contact-wrapper">
+            <h3>Taxus Street Coffee</h3>
+            <p>Based out of Chesapeake, VA</p>
+            <p>Phone: <a href="tel:555-555-5555">555.555.555</a></p>
+            <p>Email: <a href="mailto:someone@example.com?Subject=Hello%20again" target="_top">info@taxusstreetcoffee.com</a></p>
+          </div>
+
+        </div>
+
+        <div class="info-wrapper">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec laoreet, lorem vel lobortis elementum, odio tortor venenatis purus, vitae dignissim felis erat mattis turpis.Quisque nibh purus, tincidunt a metus sit amet, porttitor ullamcorper lectus. Praesent sagittis luctus erat, sit amet tempor nibh euismod sed. In euismod consectetur fringilla. Suspendisse at viverra lacus, non tincidunt dolor. Quisque metus ex, scelerisque ac augue in, convallis euismod metus. Nam a elit nec erat feugiat ornare.</p>
+          <p>Shoot us an <a href="mailto:someone@example.com?Subject=Hello%20again" target="_top">email</a> to order some beans.</p>
+        </div>
+
   </div>
-
-  <div class="info-wrapper">
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec laoreet, lorem vel lobortis elementum, odio tortor venenatis purus, vitae dignissim felis erat mattis turpis.Quisque nibh purus, tincidunt a metus sit amet, porttitor ullamcorper lectus. Praesent sagittis luctus erat, sit amet tempor nibh euismod sed. In euismod consectetur fringilla. Suspendisse at viverra lacus, non tincidunt dolor. Quisque metus ex, scelerisque ac augue in, convallis euismod metus. Nam a elit nec erat feugiat ornare.</p>
-    <p>Shoot us an <a href="mailto:someone@example.com?Subject=Hello%20again" target="_top">email</a> to order some beans.</p>
-  </div>
-
-</div>
 </body>
 </html>
